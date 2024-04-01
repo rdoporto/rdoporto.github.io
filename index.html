@@ -323,23 +323,23 @@
 						<div class="inner medium">
 							<h2>Reservar</h2>
 							<h3>Indícanos las fechas y te confirmaremos la disponibilidad</h3>
-							<form action="https://formsubmit.co/rdoportoregueiro@gmail.com" method="POST" >
+							<form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSemNczalAFLV2X2RPIB9AMzXzMhZ1UcZtzxehKxrAPqd86W2g/viewform?usp=sf_link" target="hidden_iframe" onsubmit="submitted=true;" >
 								<div class="fields">
 									<div class="field half">
 										<label for="name"></label>
-										<input type="text" name="nombre" id="name" value="" placeholder="Nombre y apellidos"/>
+										<input type="text" name="entry.1196737530" id="entry.1196737530" value="" placeholder="Nombre y apellidos"/>
 									</div>
 									<div class="field half">
 										<label for="tel"></label>
-										<input type="tel" name="telefono" id="tel" value="" placeholder="Teléfono"/>
+										<input type="text" name="entry.1287300512" id="entry.1287300512" value="" placeholder="Teléfono"/>
 									</div>
 									<div class="field">
 										<label for="email"></label>
-										<input type="email" name="email" id="email" value="" placeholder="Correo electrónico"/>
+										<input type="text" name="entry.1768070927" id="entry.1768070927" value="" placeholder="Correo electrónico"/>
 									</div>
 									<div class="field">
 										<label for="message"></label>
-										<textarea name="mensaje" id="message" placeholder="Mensaje" rows="2"></textarea>
+										<textarea type="text" name="entry.1480062072" id="entry.1480062072" placeholder="Mensaje" rows="2"></textarea>
 									</div>
 								</div>
 								<ul class="actions special">
@@ -347,6 +347,17 @@
 								</ul>
 							</form>
 						</div>
+						
+						<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+
+						<script src="assets/js/jquery.min.js"></script>
+						<script type="text/javascript">var submitted=false;</script>
+						<script type="text/javascript">
+						$('#gform').on('submit', function(e) {
+						  $('#gform *').fadeOut(2000);
+						  $('#gform').prepend('Your submission has been processed...');
+						  });
+						</script>
 					</section>				<!-- Footer -->
 					<footer class="wrapper style1 align-center">
 						<div class="inner">
