@@ -322,26 +322,35 @@
 					<section class="wrapper style1 align-center" id="last">
 						<div class="inner medium">
 							<h2>Reservar</h2>
-							<h3>Indícanos las fechas y te confirmaremos la disponibilida</h3>
+							<h3>Indícanos las fechas y te confirmaremos la disponibilidad</h3>
 							<form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSemNczalAFLV2X2RPIB9AMzXzMhZ1UcZtzxehKxrAPqd86W2g/formResponse?" target="hidden_iframe" onsubmit="submitted=true;" >
 								<div class="fields">
 									<div class="field half">
 										<label for="name"></label>
-										<input type="text" name="entry.1196737530" id="entry.1196737530" value="" placeholder="Nombre y apellidos"/>
+										<input type="text" name="entry.1196737530" id="entry.1196737530" value="" placeholder="Nombre y apellidos*" required/>
 									</div>
 									<div class="field half">
 										<label for="tel"></label>
-										<input type="text" name="entry.1287300512" id="entry.1287300512" value="" placeholder="Teléfono"/>
+										<input type="text" name="entry.1287300512" id="entry.1287300512" value="" placeholder="Teléfono*" required/>
 									</div>
 									<div class="field">
 										<label for="email"></label>
-										<input type="text" name="entry.1768070927" id="entry.1768070927" value="" placeholder="Correo electrónico"/>
+										<input type="text" name="entry.1768070927" id="entry.1768070927" value="" placeholder="Correo electrónico*" required/>
+									</div>
+									<div class="field half">
+										<label for="entrada">Fecha de entrada*</label>
+										<input type="date" name="entry.416966492" id="entry.416966492" value="" placeholder="*" required/>
+									</div>
+									<div class="field half">
+										<label for="salida">Fecha de salida*</label>
+										<input type="date" name="entry.1838710782" id="entry.1838710782" value="" placeholder="" required/>
 									</div>
 									<div class="field">
 										<label for="message"></label>
-										<textarea type="text" name="entry.1480062072" id="entry.1480062072" placeholder="Mensaje" rows="2"></textarea>
+										<textarea type="text" name="entry.1480062072" id="entry.1480062072" placeholder="Mensaje" rows="2" value=""></textarea>
 									</div>
 								</div>
+								<h4>*Campos obligatorios</h4>
 								<ul class="actions special">
 									<li><input type="submit" name="submit" id="submit" value="Enviar mensaje" /></li>
 								</ul>
@@ -355,7 +364,7 @@
 						<script type="text/javascript">
 						$('#gform').on('submit', function(e) {
 						  $('#gform *').fadeOut(2000);
-						  $('#gform').prepend('Tu petición ha sido procesada.');
+						  $('#gform').prepend('Tu petición ha sido procesada.\nTe escribiremos lo antes posible.');
 						  });
 						</script>
 					</section>				<!-- Footer -->
